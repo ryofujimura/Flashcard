@@ -23,11 +23,13 @@ struct Card {
 
 struct CardView: View {
     let card: Card
-    private let swipeThreshold: Double = 200 // <--- Define a swipeThreshold constant top level
-    @State private var isShowingQuestion = true
-    @State private var offset: CGSize = .zero
+    
     var onSwipedLeft: (() -> Void)? // <-- Add closures to be called when user swipes left or right
     var onSwipedRight: (() -> Void)? // <--
+    
+    @State private var isShowingQuestion = true
+    @State private var offset: CGSize = .zero
+    private let swipeThreshold: Double = 200 // <--- Define a swipeThreshold constant top level
     
     var body: some View {
         ZStack {
@@ -61,9 +63,6 @@ struct CardView: View {
         .onTapGesture {
             isShowingQuestion.toggle()
         }
-        .offset(CGSize(width: offset.width, height: 0))
-        .rotationEffect(.degrees(offset.width / 20.0)) // <-- Add rotation when swiping
-        .offset(CGSize(width: offset.width, height: 0))
         .opacity(3 - abs(offset.width) / swipeThreshold * 3) // <-- Fade the card out as user swipes, beginning fade in the last 1/3 to the threshold
         .rotationEffect(.degrees(offset.width / 20.0))
         .offset(CGSize(width: offset.width, height: 0))

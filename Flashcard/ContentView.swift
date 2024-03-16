@@ -14,16 +14,14 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             ForEach(0..<cards.count, id: \.self) { index in
-                CardView(card: cards[index])
-                    .rotationEffect(.degrees(Double(cards.count - 2 - index) * -3))
+                CardView(card: cards[index], onSwipedLeft: { // <-- Add swiped left property
+                    cards.remove(at: index) // <-- Remove the card from the cards array
+                }, onSwipedRight: { // <-- Add swiped right property
+                    cards.remove(at: index) // <-- Remove the card from the cards array
+                })
+                .rotationEffect(.degrees(Double(cards.count - 1 - index) * -5))
             }
         }
-        .gesture(DragGesture()
-            .onChanged { gesture in // <-- onChanged called for every gesture value change, like when the drag translation changes
-                let translation = gesture.translation // <-- Get the current translation value of the gesture. (CGSize with width and height)
-                print(translation) // <-- Print the translation value
-            }
-        )
     }
 }
 
