@@ -8,7 +8,7 @@
 import SwiftUI
 
 // Card data model
-struct Card {
+struct Card: Equatable {
     let question: String
     let answer: String
     
