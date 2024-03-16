@@ -13,6 +13,7 @@
 		AFD3A9C22BA5FDC000554BA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD3A9C12BA5FDC000554BA9 /* Preview Assets.xcassets */; };
 		AFD3A9C42BA5FDC000554BA9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3A9C32BA5FDC000554BA9 /* Persistence.swift */; };
 		AFD3A9C72BA5FDC000554BA9 /* Flashcard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFD3A9C52BA5FDC000554BA9 /* Flashcard.xcdatamodeld */; };
+		AFD3A9CE2BA6003D00554BA9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3A9CD2BA6003D00554BA9 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		AFD3A9C12BA5FDC000554BA9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AFD3A9C32BA5FDC000554BA9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		AFD3A9C62BA5FDC000554BA9 /* Flashcard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Flashcard.xcdatamodel; sourceTree = "<group>"; };
+		AFD3A9CD2BA6003D00554BA9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				AFD3A9BA2BA5FDBF00554BA9 /* FlashcardApp.swift */,
+				AFD3A9CD2BA6003D00554BA9 /* CardView.swift */,
 				AFD3A9BC2BA5FDBF00554BA9 /* ContentView.swift */,
 				AFD3A9BE2BA5FDC000554BA9 /* Assets.xcassets */,
 				AFD3A9C32BA5FDC000554BA9 /* Persistence.swift */,
@@ -147,6 +150,7 @@
 				AFD3A9BD2BA5FDBF00554BA9 /* ContentView.swift in Sources */,
 				AFD3A9C72BA5FDC000554BA9 /* Flashcard.xcdatamodeld in Sources */,
 				AFD3A9BB2BA5FDBF00554BA9 /* FlashcardApp.swift in Sources */,
+				AFD3A9CE2BA6003D00554BA9 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
